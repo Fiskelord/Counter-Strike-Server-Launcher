@@ -47,7 +47,9 @@
             this.txtCSGOdir = new System.Windows.Forms.TextBox();
             this.txtSteamCMDdir = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
+            this.SteamCMD.SuspendLayout();
             this.Indstillinger.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +70,7 @@
             // 
             // SteamCMD
             // 
+            this.SteamCMD.Controls.Add(this.button1);
             this.SteamCMD.Location = new System.Drawing.Point(4, 25);
             this.SteamCMD.Name = "SteamCMD";
             this.SteamCMD.Padding = new System.Windows.Forms.Padding(3);
@@ -229,6 +232,15 @@
             this.txtSteamCMDdir.Size = new System.Drawing.Size(499, 22);
             this.txtSteamCMDdir.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(81, 88);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -239,6 +251,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
+            this.SteamCMD.ResumeLayout(false);
             this.Indstillinger.ResumeLayout(false);
             this.Indstillinger.PerformLayout();
             this.ResumeLayout(false);
@@ -265,6 +278,7 @@
         private System.Windows.Forms.TextBox txtCSSdir;
         private System.Windows.Forms.TextBox txtCSGOdir;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
