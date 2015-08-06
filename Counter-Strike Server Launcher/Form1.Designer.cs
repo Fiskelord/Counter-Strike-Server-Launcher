@@ -31,26 +31,28 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.SteamCMD = new System.Windows.Forms.TabPage();
+            this.btnSteamCMDPath = new System.Windows.Forms.Button();
+            this.txtSteamCMDPath = new System.Windows.Forms.TextBox();
+            this.txtServerUpdatePath = new System.Windows.Forms.TextBox();
+            this.chkRememberLogin = new System.Windows.Forms.CheckBox();
+            this.chkAnonymous = new System.Windows.Forms.CheckBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnServerInstall = new System.Windows.Forms.Button();
+            this.btnServerUpdatePath = new System.Windows.Forms.Button();
+            this.btnSteamCMDSave = new System.Windows.Forms.Button();
+            this.cmbServerProgram = new System.Windows.Forms.ComboBox();
             this.Source = new System.Windows.Forms.TabPage();
             this.GlobalOffensive = new System.Windows.Forms.TabPage();
-            this.Indstillinger = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnCSSdirSearch = new System.Windows.Forms.Button();
-            this.btnCSGOdirSearch = new System.Windows.Forms.Button();
-            this.btnSteamCMDdirSearch = new System.Windows.Forms.Button();
-            this.btnCSSdirLock = new System.Windows.Forms.Button();
-            this.btnCSGOdirLock = new System.Windows.Forms.Button();
-            this.btnSteamCMDdirLock = new System.Windows.Forms.Button();
-            this.txtCSSdir = new System.Windows.Forms.TextBox();
-            this.txtCSGOdir = new System.Windows.Forms.TextBox();
-            this.txtSteamCMDdir = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.SteamCMD.SuspendLayout();
-            this.Indstillinger.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -61,30 +63,204 @@
             this.tabControl1.Controls.Add(this.SteamCMD);
             this.tabControl1.Controls.Add(this.Source);
             this.tabControl1.Controls.Add(this.GlobalOffensive);
-            this.tabControl1.Controls.Add(this.Indstillinger);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(781, 557);
+            this.tabControl1.Size = new System.Drawing.Size(560, 437);
             this.tabControl1.TabIndex = 0;
             // 
             // SteamCMD
             // 
-            this.SteamCMD.Controls.Add(this.button1);
+            this.SteamCMD.Controls.Add(this.btnSteamCMDPath);
+            this.SteamCMD.Controls.Add(this.txtSteamCMDPath);
+            this.SteamCMD.Controls.Add(this.txtServerUpdatePath);
+            this.SteamCMD.Controls.Add(this.chkRememberLogin);
+            this.SteamCMD.Controls.Add(this.chkAnonymous);
+            this.SteamCMD.Controls.Add(this.txtPassword);
+            this.SteamCMD.Controls.Add(this.txtUsername);
+            this.SteamCMD.Controls.Add(this.label7);
+            this.SteamCMD.Controls.Add(this.label6);
+            this.SteamCMD.Controls.Add(this.label9);
+            this.SteamCMD.Controls.Add(this.label5);
+            this.SteamCMD.Controls.Add(this.label8);
+            this.SteamCMD.Controls.Add(this.label4);
+            this.SteamCMD.Controls.Add(this.btnServerInstall);
+            this.SteamCMD.Controls.Add(this.btnServerUpdatePath);
+            this.SteamCMD.Controls.Add(this.btnSteamCMDSave);
+            this.SteamCMD.Controls.Add(this.cmbServerProgram);
             this.SteamCMD.Location = new System.Drawing.Point(4, 25);
             this.SteamCMD.Name = "SteamCMD";
             this.SteamCMD.Padding = new System.Windows.Forms.Padding(3);
-            this.SteamCMD.Size = new System.Drawing.Size(773, 528);
+            this.SteamCMD.Size = new System.Drawing.Size(552, 408);
             this.SteamCMD.TabIndex = 2;
             this.SteamCMD.Text = "SteamCMD";
             this.SteamCMD.UseVisualStyleBackColor = true;
+            // 
+            // btnSteamCMDPath
+            // 
+            this.btnSteamCMDPath.Location = new System.Drawing.Point(432, 127);
+            this.btnSteamCMDPath.Name = "btnSteamCMDPath";
+            this.btnSteamCMDPath.Size = new System.Drawing.Size(114, 23);
+            this.btnSteamCMDPath.TabIndex = 10;
+            this.btnSteamCMDPath.Text = "Gennemse";
+            this.btnSteamCMDPath.UseVisualStyleBackColor = true;
+            this.btnSteamCMDPath.Click += new System.EventHandler(this.btnSteamCMDPath_Click);
+            // 
+            // txtSteamCMDPath
+            // 
+            this.txtSteamCMDPath.Location = new System.Drawing.Point(9, 127);
+            this.txtSteamCMDPath.Name = "txtSteamCMDPath";
+            this.txtSteamCMDPath.Size = new System.Drawing.Size(417, 22);
+            this.txtSteamCMDPath.TabIndex = 9;
+            // 
+            // txtServerUpdatePath
+            // 
+            this.txtServerUpdatePath.Location = new System.Drawing.Point(9, 78);
+            this.txtServerUpdatePath.Name = "txtServerUpdatePath";
+            this.txtServerUpdatePath.Size = new System.Drawing.Size(417, 22);
+            this.txtServerUpdatePath.TabIndex = 8;
+            // 
+            // chkRememberLogin
+            // 
+            this.chkRememberLogin.AutoSize = true;
+            this.chkRememberLogin.Location = new System.Drawing.Point(424, 249);
+            this.chkRememberLogin.Name = "chkRememberLogin";
+            this.chkRememberLogin.Size = new System.Drawing.Size(90, 20);
+            this.chkRememberLogin.TabIndex = 7;
+            this.chkRememberLogin.Text = "Husk login";
+            this.chkRememberLogin.UseVisualStyleBackColor = true;
+            this.chkRememberLogin.CheckedChanged += new System.EventHandler(this.chkRememberLogin_CheckedChanged);
+            // 
+            // chkAnonymous
+            // 
+            this.chkAnonymous.AutoSize = true;
+            this.chkAnonymous.Location = new System.Drawing.Point(424, 203);
+            this.chkAnonymous.Name = "chkAnonymous";
+            this.chkAnonymous.Size = new System.Drawing.Size(122, 20);
+            this.chkAnonymous.TabIndex = 6;
+            this.chkAnonymous.Text = "Log ind anonym";
+            this.chkAnonymous.UseVisualStyleBackColor = true;
+            this.chkAnonymous.CheckedChanged += new System.EventHandler(this.chkAnonymous_CheckedChanged);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(9, 247);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = 'x';
+            this.txtPassword.Size = new System.Drawing.Size(409, 22);
+            this.txtPassword.TabIndex = 5;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(9, 201);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(409, 22);
+            this.txtUsername.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 228);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(94, 16);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Adgangskode";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 182);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 16);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Brugernavn";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 107);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(123, 16);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Sti til SteamCMD";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 156);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(143, 16);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Login til SteamCMD";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(6, 59);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(90, 16);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Sti til server";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(336, 16);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Server program der skal installeres / opdateres";
+            // 
+            // btnServerInstall
+            // 
+            this.btnServerInstall.Location = new System.Drawing.Point(424, 378);
+            this.btnServerInstall.Name = "btnServerInstall";
+            this.btnServerInstall.Size = new System.Drawing.Size(122, 24);
+            this.btnServerInstall.TabIndex = 3;
+            this.btnServerInstall.Text = "Installer / Opdater";
+            this.btnServerInstall.UseVisualStyleBackColor = true;
+            this.btnServerInstall.Click += new System.EventHandler(this.btnServerInstall_Click);
+            // 
+            // btnServerUpdatePath
+            // 
+            this.btnServerUpdatePath.Location = new System.Drawing.Point(432, 77);
+            this.btnServerUpdatePath.Name = "btnServerUpdatePath";
+            this.btnServerUpdatePath.Size = new System.Drawing.Size(114, 24);
+            this.btnServerUpdatePath.TabIndex = 3;
+            this.btnServerUpdatePath.Text = "Gennemse";
+            this.btnServerUpdatePath.UseVisualStyleBackColor = true;
+            this.btnServerUpdatePath.Click += new System.EventHandler(this.btnServerUpdatePath_Click);
+            // 
+            // btnSteamCMDSave
+            // 
+            this.btnSteamCMDSave.Location = new System.Drawing.Point(6, 378);
+            this.btnSteamCMDSave.Name = "btnSteamCMDSave";
+            this.btnSteamCMDSave.Size = new System.Drawing.Size(75, 24);
+            this.btnSteamCMDSave.TabIndex = 3;
+            this.btnSteamCMDSave.Text = "Gem";
+            this.btnSteamCMDSave.UseVisualStyleBackColor = true;
+            // 
+            // cmbServerProgram
+            // 
+            this.cmbServerProgram.FormattingEnabled = true;
+            this.cmbServerProgram.Items.AddRange(new object[] {
+            "Counter-Strike: Source",
+            "Counter-Strike: Global Offensive"});
+            this.cmbServerProgram.Location = new System.Drawing.Point(9, 28);
+            this.cmbServerProgram.Name = "cmbServerProgram";
+            this.cmbServerProgram.Size = new System.Drawing.Size(537, 24);
+            this.cmbServerProgram.TabIndex = 2;
             // 
             // Source
             // 
             this.Source.Location = new System.Drawing.Point(4, 25);
             this.Source.Name = "Source";
             this.Source.Padding = new System.Windows.Forms.Padding(3);
-            this.Source.Size = new System.Drawing.Size(773, 528);
+            this.Source.Size = new System.Drawing.Size(552, 408);
             this.Source.TabIndex = 1;
             this.Source.Text = "Source";
             this.Source.UseVisualStyleBackColor = true;
@@ -94,166 +270,25 @@
             this.GlobalOffensive.Location = new System.Drawing.Point(4, 25);
             this.GlobalOffensive.Name = "GlobalOffensive";
             this.GlobalOffensive.Padding = new System.Windows.Forms.Padding(3);
-            this.GlobalOffensive.Size = new System.Drawing.Size(773, 528);
+            this.GlobalOffensive.Size = new System.Drawing.Size(552, 408);
             this.GlobalOffensive.TabIndex = 0;
             this.GlobalOffensive.Text = "Global Offensive";
             this.GlobalOffensive.UseVisualStyleBackColor = true;
-            // 
-            // Indstillinger
-            // 
-            this.Indstillinger.Controls.Add(this.label3);
-            this.Indstillinger.Controls.Add(this.label2);
-            this.Indstillinger.Controls.Add(this.label1);
-            this.Indstillinger.Controls.Add(this.btnCSSdirSearch);
-            this.Indstillinger.Controls.Add(this.btnCSGOdirSearch);
-            this.Indstillinger.Controls.Add(this.btnSteamCMDdirSearch);
-            this.Indstillinger.Controls.Add(this.btnCSSdirLock);
-            this.Indstillinger.Controls.Add(this.btnCSGOdirLock);
-            this.Indstillinger.Controls.Add(this.btnSteamCMDdirLock);
-            this.Indstillinger.Controls.Add(this.txtCSSdir);
-            this.Indstillinger.Controls.Add(this.txtCSGOdir);
-            this.Indstillinger.Controls.Add(this.txtSteamCMDdir);
-            this.Indstillinger.Location = new System.Drawing.Point(4, 25);
-            this.Indstillinger.Name = "Indstillinger";
-            this.Indstillinger.Padding = new System.Windows.Forms.Padding(3);
-            this.Indstillinger.Size = new System.Drawing.Size(773, 528);
-            this.Indstillinger.TabIndex = 3;
-            this.Indstillinger.Text = "Indstillinger";
-            this.Indstillinger.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 65);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "CS:S";
-            this.label3.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "CS:GO";
-            this.label2.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "SteamCMD";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // btnCSSdirSearch
-            // 
-            this.btnCSSdirSearch.Location = new System.Drawing.Point(595, 62);
-            this.btnCSSdirSearch.Name = "btnCSSdirSearch";
-            this.btnCSSdirSearch.Size = new System.Drawing.Size(91, 23);
-            this.btnCSSdirSearch.TabIndex = 1;
-            this.btnCSSdirSearch.Text = "Gennemse";
-            this.btnCSSdirSearch.UseVisualStyleBackColor = true;
-            this.btnCSSdirSearch.Click += new System.EventHandler(this.btnCSSdirSearch_Click);
-            // 
-            // btnCSGOdirSearch
-            // 
-            this.btnCSGOdirSearch.Location = new System.Drawing.Point(595, 34);
-            this.btnCSGOdirSearch.Name = "btnCSGOdirSearch";
-            this.btnCSGOdirSearch.Size = new System.Drawing.Size(91, 23);
-            this.btnCSGOdirSearch.TabIndex = 1;
-            this.btnCSGOdirSearch.Text = "Gennemse";
-            this.btnCSGOdirSearch.UseVisualStyleBackColor = true;
-            this.btnCSGOdirSearch.Click += new System.EventHandler(this.btnCSGOdirSearch_Click);
-            // 
-            // btnSteamCMDdirSearch
-            // 
-            this.btnSteamCMDdirSearch.Location = new System.Drawing.Point(595, 6);
-            this.btnSteamCMDdirSearch.Name = "btnSteamCMDdirSearch";
-            this.btnSteamCMDdirSearch.Size = new System.Drawing.Size(91, 23);
-            this.btnSteamCMDdirSearch.TabIndex = 1;
-            this.btnSteamCMDdirSearch.Text = "Gennemse";
-            this.btnSteamCMDdirSearch.UseVisualStyleBackColor = true;
-            this.btnSteamCMDdirSearch.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnCSSdirLock
-            // 
-            this.btnCSSdirLock.Location = new System.Drawing.Point(692, 62);
-            this.btnCSSdirLock.Name = "btnCSSdirLock";
-            this.btnCSSdirLock.Size = new System.Drawing.Size(75, 23);
-            this.btnCSSdirLock.TabIndex = 1;
-            this.btnCSSdirLock.Text = "Lås";
-            this.btnCSSdirLock.UseVisualStyleBackColor = true;
-            this.btnCSSdirLock.Click += new System.EventHandler(this.btnCSSdirLock_Click);
-            // 
-            // btnCSGOdirLock
-            // 
-            this.btnCSGOdirLock.Location = new System.Drawing.Point(692, 34);
-            this.btnCSGOdirLock.Name = "btnCSGOdirLock";
-            this.btnCSGOdirLock.Size = new System.Drawing.Size(75, 23);
-            this.btnCSGOdirLock.TabIndex = 1;
-            this.btnCSGOdirLock.Text = "Lås";
-            this.btnCSGOdirLock.UseVisualStyleBackColor = true;
-            this.btnCSGOdirLock.Click += new System.EventHandler(this.btnCSGOdirLock_Click);
-            // 
-            // btnSteamCMDdirLock
-            // 
-            this.btnSteamCMDdirLock.Location = new System.Drawing.Point(692, 6);
-            this.btnSteamCMDdirLock.Name = "btnSteamCMDdirLock";
-            this.btnSteamCMDdirLock.Size = new System.Drawing.Size(75, 23);
-            this.btnSteamCMDdirLock.TabIndex = 1;
-            this.btnSteamCMDdirLock.Text = "Lås";
-            this.btnSteamCMDdirLock.UseVisualStyleBackColor = true;
-            this.btnSteamCMDdirLock.Click += new System.EventHandler(this.btnSteamCMDdirLock_Click);
-            // 
-            // txtCSSdir
-            // 
-            this.txtCSSdir.Location = new System.Drawing.Point(90, 63);
-            this.txtCSSdir.Name = "txtCSSdir";
-            this.txtCSSdir.Size = new System.Drawing.Size(499, 22);
-            this.txtCSSdir.TabIndex = 0;
-            // 
-            // txtCSGOdir
-            // 
-            this.txtCSGOdir.Location = new System.Drawing.Point(90, 35);
-            this.txtCSGOdir.Name = "txtCSGOdir";
-            this.txtCSGOdir.Size = new System.Drawing.Size(499, 22);
-            this.txtCSGOdir.TabIndex = 0;
-            // 
-            // txtSteamCMDdir
-            // 
-            this.txtSteamCMDdir.Location = new System.Drawing.Point(90, 7);
-            this.txtSteamCMDdir.Name = "txtSteamCMDdir";
-            this.txtSteamCMDdir.Size = new System.Drawing.Size(499, 22);
-            this.txtSteamCMDdir.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(81, 88);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 581);
+            this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
             this.SteamCMD.ResumeLayout(false);
-            this.Indstillinger.ResumeLayout(false);
-            this.Indstillinger.PerformLayout();
+            this.SteamCMD.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -264,21 +299,24 @@
         private System.Windows.Forms.TabPage GlobalOffensive;
         private System.Windows.Forms.TabPage Source;
         private System.Windows.Forms.TabPage SteamCMD;
-        private System.Windows.Forms.TabPage Indstillinger;
-        private System.Windows.Forms.Button btnSteamCMDdirLock;
-        private System.Windows.Forms.TextBox txtSteamCMDdir;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnCSSdirSearch;
-        private System.Windows.Forms.Button btnCSGOdirSearch;
-        private System.Windows.Forms.Button btnSteamCMDdirSearch;
-        private System.Windows.Forms.Button btnCSSdirLock;
-        private System.Windows.Forms.Button btnCSGOdirLock;
-        private System.Windows.Forms.TextBox txtCSSdir;
-        private System.Windows.Forms.TextBox txtCSGOdir;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnServerInstall;
+        private System.Windows.Forms.ComboBox cmbServerProgram;
+        private System.Windows.Forms.CheckBox chkRememberLogin;
+        private System.Windows.Forms.CheckBox chkAnonymous;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtServerUpdatePath;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnServerUpdatePath;
+        private System.Windows.Forms.Button btnSteamCMDSave;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnSteamCMDPath;
+        private System.Windows.Forms.TextBox txtSteamCMDPath;
     }
 }
 

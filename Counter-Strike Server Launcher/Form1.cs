@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,75 +18,111 @@ namespace Counter_Strike_Server_Launcher
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            label1.Text = "SteamCMD";
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void btnServerUpdatePath_Click(object sender, EventArgs e)
         {
             folderBrowserDialog1.ShowDialog();
-            txtSteamCMDdir.Text = folderBrowserDialog1.SelectedPath;
+            txtServerUpdatePath.Text = folderBrowserDialog1.SelectedPath;
         }
 
-        private void btnCSGOdirSearch_Click(object sender, EventArgs e)
+        private void btnSteamCMDPath_Click(object sender, EventArgs e)
         {
             folderBrowserDialog1.ShowDialog();
-            txtCSGOdir.Text = folderBrowserDialog1.SelectedPath;
+            txtSteamCMDPath.Text = folderBrowserDialog1.SelectedPath;
         }
 
-        private void btnCSSdirSearch_Click(object sender, EventArgs e)
+        private void chkAnonymous_CheckedChanged(object sender, EventArgs e)
         {
-            folderBrowserDialog1.ShowDialog();
-            txtCSSdir.Text = folderBrowserDialog1.SelectedPath;
-        }
-
-        private void btnSteamCMDdirLock_Click(object sender, EventArgs e)
-        {
-            if (txtSteamCMDdir.ReadOnly == true)
+            if (chkAnonymous.Checked == false)
             {
-                txtSteamCMDdir.ReadOnly = false;
-                btnSteamCMDdirLock.Text = "Lås";
-                btnSteamCMDdirSearch.Enabled = true;
+                chkRememberLogin.Enabled = true;
+                txtUsername.Enabled = true;
+                txtPassword.Enabled = true;
             }
             else
             {
-                txtSteamCMDdir.ReadOnly = true;
-                btnSteamCMDdirLock.Text = "Lås op";
-                btnSteamCMDdirSearch.Enabled = false;
+                chkRememberLogin.Enabled = false;
+                txtUsername.Enabled = false;
+                txtPassword.Enabled = false;
             }
         }
 
-        private void btnCSGOdirLock_Click(object sender, EventArgs e)
+        private void chkRememberLogin_CheckedChanged(object sender, EventArgs e)
         {
-            if (txtCSGOdir.ReadOnly == true)
+            if (chkRememberLogin.Checked == false)
             {
-                txtCSGOdir.ReadOnly = false;
-                btnCSGOdirLock.Text = "Lås";
-                btnCSGOdirSearch.Enabled = true;
+                chkAnonymous.Enabled = true;
+                txtUsername.Enabled = true;
+                txtPassword.Enabled = true;
             }
             else
             {
-                txtCSGOdir.ReadOnly = true;
-                btnCSGOdirLock.Text = "Lås op";
-                btnCSGOdirSearch.Enabled = false;
+                chkAnonymous.Enabled = false;
+                txtUsername.Enabled = false;
+                txtPassword.Enabled = false;
             }
         }
 
-        private void btnCSSdirLock_Click(object sender, EventArgs e)
+        private void btnServerInstall_Click(object sender, EventArgs e)
         {
-            if (txtCSSdir.ReadOnly == true)
+            bool error = false;
+            if (chkAnonymous.Checked == false)
             {
-                txtCSSdir.ReadOnly = false;
-                btnCSSdirLock.Text = "Lås";
-                btnCSSdirSearch.Enabled = true;
+                if (txtUsername.Text == "" || txtPassword.Text == "")
+                {
+                    MessageBox.Show("Indtast brugernavn og adgangskode");
+                    error = true;
+                }
             }
-            else
+
+            if (chkAnonymous.Checked == true && cmbServerProgram.Text == "Counter-Strike: Global Offensive" && error == false)
             {
-                txtCSSdir.ReadOnly = true;
-                btnCSSdirLock.Text = "Lås op";
-                btnCSSdirSearch.Enabled = false;
+                Process process = new Process();
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+
+                startInfo.FileName = txtSteamCMDPath.Text + "\\steamcmd.exe";
+                startInfo.Arguments = "+login anonymous +force_install_dir " + "\"" + txtServerUpdatePath.Text + "\"" + " +app_update 740 +quit";
+                process.StartInfo = startInfo;
+
+                process.Start();
             }
+
+            if (chkAnonymous.Checked == false && cmbServerProgram.Text == "Counter-Strike: Global Offensive" && error == false)
+            {
+                Process process = new Process();
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+
+                startInfo.FileName = txtSteamCMDPath.Text + "\\steamcmd.exe";
+                startInfo.Arguments = "+login " + txtUsername.Text + " " + txtPassword.Text + " +force_install_dir " + "\"" + txtServerUpdatePath.Text + "\"" + " +app_update 740 +quit";
+                process.StartInfo = startInfo;
+
+                process.Start();
+            }
+
+            if (chkAnonymous.Checked == true && cmbServerProgram.Text == "Counter-Strike: Source" && error == false)
+            {
+                Process process = new Process();
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+
+                startInfo.FileName = txtSteamCMDPath.Text + "\\steamcmd.exe";
+                startInfo.Arguments = "+login anonymous +force_install_dir " + "\"" + txtServerUpdatePath.Text + "\"" + " +app_update 232330 +quit";
+                process.StartInfo = startInfo;
+
+                process.Start();
+            }
+
+            if (chkAnonymous.Checked == false && cmbServerProgram.Text == "Counter-Strike: Source" && error == false)
+            {
+                Process process = new Process();
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+
+                startInfo.FileName = txtSteamCMDPath.Text + "\\steamcmd.exe";
+                startInfo.Arguments = "+login " + txtUsername.Text + " " + txtPassword.Text + " +force_install_dir " + "\"" + txtServerUpdatePath.Text + "\"" + " +app_update 232330 +quit";
+                process.StartInfo = startInfo;
+
+                process.Start();
+            }
+
+            error = false;
         }
     }
 }
